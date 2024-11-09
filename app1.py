@@ -29,7 +29,7 @@ st.markdown(
 # Load and preprocess data
 @st.cache_data
 def load_data():
-    data_path = "D:/MSIS/Customer churn prediction/Customer-Churn-Prediction---Using-TensorFlow/Data/WA_Fn-UseC_-Telco-Customer-Churn.csv"
+    data_path = "WA_Fn-UseC_-Telco-Customer-Churn.csv"
     data = pd.read_csv(data_path)
     data['TotalCharges'] = pd.to_numeric(data['TotalCharges'], errors='coerce')
     data.dropna(subset=['TotalCharges'], inplace=True)
